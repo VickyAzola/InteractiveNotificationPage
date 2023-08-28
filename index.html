@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Frontend Mentor | Notifications page</title>
+</head>
+
+<body class="min-h-screen grid place-items-center md:bg-[#f7fafd]" style="font-family: 'Plus Jakarta Sans', sans-serif;">
+
+<div class="max-w-md md:max-w-2xl md:my-8 md:p-4 md:shadow-xl md:rounded-xl bg-white">
+  <header class="flex justify-between items-center m-4">
+    <div class="flex gap-x-2 items-center">
+      <h1 class="font-extrabold text-[#1c202b] text-lg">Notifications</h1>
+      <div id="notification_Number" class="font-extrabold text-white bg-[#0a317b] text-sm px-2.5 rounded"></div>
+    </div>
+    <button onclick="markAsRead()" class="text-sm text-[#5e6778] hover:text-[#0a317b]">Mark all as read</button>
+  </header>
+
+  <main class="m-4 py-2 space-y-3">
+    <section class="notification flex gap-x-3 bg-[#f7fafd] p-2 rounded ">
+      <img class="w-9 h-9" src="assets/images/avatar-mark-webber.webp" alt="Mark Webber Profile Picture"/>
+      <div class="text-sm text-[#5e6778]">
+        <p>
+          <a href="#"><span class="font-bold text-[#1c202b] text-base hover:text-[#0a317b]">Mark Webber</span></a>
+          reacted to your recent post
+          <a href="#"><span class="font-bold  hover:text-[#0a317b]">My first tournament today!</span></a>
+          <span class="red_point ml-1 aspect-square rounded-full w-2 h-2 bg-[#f65351] inline-block"></span>
+        </p>
+        <p class="text-xs text-[#939dae]">1m ago</p>
+      </div>
+    </section>
+
+    <section class="notification flex gap-x-3 bg-[#f7fafd] p-2 rounded">
+      <img class="w-9 h-9" src="assets/images/avatar-angela-gray.webp" alt="Mark Webber Profile Picture"/>
+      <div class="text-sm text-[#5e6778]">
+        <p>
+          <a href="#"><span class="font-bold text-[#1c202b] text-base  hover:text-[#0a317b]">Angela Gray</span></a>
+          followed you
+          <span class="red_point ml-1 aspect-square rounded-full w-2 h-2 bg-[#f65351] inline-block"></span>
+        </p>
+        <p class="text-xs text-[#939dae]">5m ago</p>
+      </div>
+    </section>
+
+    <section class="notification  flex gap-x-3 bg-[#f7fafd] p-2 rounded">
+      <img class="w-9 h-9" src="assets/images/avatar-jacob-thompson.webp" alt="Mark Webber Profile Picture"/>
+      <div class="text-sm text-[#5e6778]">
+        <p>
+          <a href="#"><span class="font-bold text-[#1c202b] text-base hover:text-[#0a317b]">Jacob Thompson</span></a>
+          has joined your group
+          <a href="#"><span class="font-bold hover:text-[#0a317b]">Chess Club</span></a>
+          <span class="red_point ml-1 aspect-square rounded-full w-2 h-2 bg-[#f65351] inline-block"></span>
+        </p>
+        <p class="text-xs text-[#939dae]">1 day ago</p>
+      </div>
+    </section>
+
+    <section class="flex gap-x-3 p-2">
+      <img class="w-9 h-9" src="assets/images/avatar-rizky-hasanuddin.webp" alt="Mark Webber Profile Picture"/>
+      <div>
+        <div class="text-sm text-[#5e6778]">
+          <p>
+            <a href="#"><span class="font-bold text-[#1c202b] text-base hover:text-[#0a317b]">Rizky Hasanuddin</span></a>
+            sent you a private message
+          </p>
+          <p class="text-xs text-[#939dae]">5 day ago</p>
+        </div>
+        <div class="border rounded-lg p-3 text-sm mt-3 text-[#5e6778] hover:border-[#e5effa] hover:bg-[#e5effa]">
+          <a href="#"><p>Hello, thanks for setting up the Chess Club. I've been a member for a few weeks now and 
+            I'm already having lots of fun and improving my game.</p></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="flex p-2 justify-between">
+      <div class="flex gap-x-3">
+        <img class="w-9 h-9" src="assets/images/avatar-kimberly-smith.webp" alt="Mark Webber Profile Picture"/>
+        <div class="text-sm text-[#5e6778]">
+          <p>
+            <a href="#"><span class="font-bold text-[#1c202b] text-base hover:text-[#0a317b]">Kimberly Smith</span></a> 
+            commented on your picture
+          </p>
+          <p class="text-xs text-[#939dae]">1 week ago</p>
+        </div>
+      </div>
+      <a href="#"><img class="w-9 h-9 ml-5" src="assets/images/image-chess.webp" alt="Women playing chess" /></a>
+    </section>
+
+    <section class="flex gap-x-3 p-2">
+      <img class="w-9 h-9" src="assets/images/avatar-nathan-peterson.webp" alt="Mark Webber Profile Picture"/>
+        <div class="text-sm text-[#5e6778]">
+          <p>
+            <a href="#">span class="font-bold text-[#1c202b] text-base hover:text-[#0a317b]">Nathan Peterson</span></a>
+            reacted to your recent post
+            <a href="#"><span class="font-bold hover:text-[#0a317b]">5 end-game strategies to increase your win rate</span></a>
+          </p>
+          <p class="text-xs text-[#939dae]">2 weeks ago</p>
+        </div>
+    </section>
+
+    <section class="flex gap-x-3 p-2">
+      <img class="w-9 h-9" src="assets/images/avatar-anna-kim.webp" alt="Mark Webber Profile Picture"/>
+      <div class="text-sm text-[#5e6778]">
+        <p>
+          <a href="#"><span class="font-bold text-[#1c202b] text-base hover:text-[#0a317b]">Anna Kim</span></a>
+          left the group
+          <a href="#"><span class="font-bold hover:text-[#0a317b]">Chess Club</span></a>
+        </p>
+        <p class="text-xs text-[#939dae]">2 weeks ago</p>
+      </div>
+    </section>
+  </main>
+</div>
+  
+  <footer class="text-xs text-center text-[#939dae] py-2">
+    <p>Challenge by <a class="font-bold hover:text-[#0a317b]" href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a class="font-bold hover:text-[#0a317b]" href="https://github.com/VickyAzola/InteractiveNotificationPage" target="_blank">Victoria Azola</a></p>
+  </footer>
+
+</body>
+<script src="index.js"></script>
+</html>
